@@ -61,3 +61,4 @@ Contents
     ray-tracing
     bukkit-sponge-compare
     tutorials
+    internals/index
