@@ -1,5 +1,5 @@
 =============
-Plugin mixins
+Plugin Mixins
 =============
 
 `Mixins <https://github.com/SpongePowered/Mixin>`_ can be used to modify classes at runtime before they are loaded. You
