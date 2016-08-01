@@ -1,16 +1,16 @@
 =======================
-Internal Sponge classes
+Internal Sponge Classes
 =======================
 
-You can add SpongeCommon, SpongeVanilla or SpongeForge as dependency to your plugin project if you need to access
+You can add SpongeCommon, SpongeVanilla or SpongeForge as a dependency to your plugin project if you need to access
 internal Sponge classes.
 
 .. warning::
     You should only add a specific implementation dependency when really necessary. If possible, use SpongeAPI or
     request feature additions on the `SpongeAPI issue tracker <https://github.com/SpongePowered/SpongeAPI/issues>`_.
 
-Additionally to the normal artifacts, the implementation modules provide a ``dev`` artifact which can be easily used in
-the IDE since it is not re-obfuscated. All implementation modules have the API module already included, so you do not
+In addition to the normal artifacts, the implementation modules provide a ``dev`` artifact which can be easily used in
+the IDE, since it is not re-obfuscated. All implementation modules have the API module already included, so you do not
 need an extra dependency on SpongeAPI.
 
 SpongeCommon
@@ -21,7 +21,7 @@ SpongeCommon
 - **Version**: Same as SpongeAPI
 - **Classifier**: ``dev``
 
-Example using Gradle
+Example Using Gradle
 ````````````````````
 .. code-block:: groovy
 
@@ -39,7 +39,7 @@ Choose a build from the downloads page and copy the full version string to your 
 - **Version**: Use a build version from the downloads page
 - **Classifier**: ``dev``
 
-Example using Gradle
+Example Using Gradle
 ````````````````````
 
 .. code-block:: groovy
@@ -58,7 +58,7 @@ Choose a build from the downloads page and copy the full version string to your 
 - **Version**: Use a build version from the downloads page
 - **Classifier**: ``dev``
 
-Example using Gradle
+Example Using Gradle
 ````````````````````
 
 .. code-block:: groovy
