@@ -1,10 +1,10 @@
 ===================
-Access transformers
+Access Transformers
 ===================
 
-Since some parts of the Minecraft code were not designed to be used from the outside you may find yourself in a
+Since some parts of the Minecraft code were not designed to be used from the outside, you may find yourself in a
 situation in which you need to access a field or method that is not public. While you could normally easily use
-reflection to access the field or method MCP will make this more difficult since you have two different names - the MCP
+reflection to access the field or method, MCP will make this more difficult since you have two different names - the MCP
 names in the development environment and the Searge names in production.
 
 For example to access the method ``blah()`` using reflection you would need to use ``blah`` in the development
@@ -53,7 +53,7 @@ Here are two examples for an access transformer line:
 
 Production
 ``````````
-To apply the access transformers in production you need to add a ``FMLAT`` manifest entry to your plugin with the file
+To apply the access transformers in production, you need to add a ``FMLAT`` manifest entry to your plugin with the file
 name of your access transformer in the ``META-INF`` directory.
 
 .. code-block:: groovy
