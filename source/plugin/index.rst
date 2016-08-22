@@ -28,6 +28,7 @@ Contents
     buildsystem
     workspace/index
     project/index
+    ore-publish
     plugin-identifier
     plugin-class
     lifecycle
