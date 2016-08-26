@@ -24,6 +24,7 @@ You can choose between two different kinds of workspaces:
 Vanilla Workspace
 `````````````````
 .. code-block:: groovy
+    :emphasize-lines: 1-12,16,19-22
 
     buildscript {
         repositories {
@@ -51,6 +52,7 @@ Vanilla Workspace
 Forge Workspace
 ```````````````
 .. code-block:: groovy
+    :emphasize-lines: 1-12,18-23
 
     buildscript {
         repositories {
