@@ -40,7 +40,7 @@ Vanilla Workspace
 
     plugins {
         id 'org.spongepowered.plugin' version '0.6'
-        id 'net.minecrell.vanillagradle.server' version '2.0.3_1'
+        id 'net.minecrell.vanillagradle.server' version '2.2-1'
     }
 
     minecraft {
