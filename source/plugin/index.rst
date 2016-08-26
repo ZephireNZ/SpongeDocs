@@ -37,7 +37,7 @@ Contents
     logging
     commands/index
     event/index
-    assets/index
+    assets
     configuration/index
     text/index
     data/index
@@ -55,6 +55,7 @@ Contents
     wgen/index
     manager
     game-profile-manager
+    offline-userplayer-data
     debugging
     tab-lists
     plugin-meta
