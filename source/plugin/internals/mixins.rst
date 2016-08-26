@@ -16,7 +16,7 @@ Setup
     .. code-block:: groovy
 
         dependencies {
-            compile 'org.spongepowered:mixin:0.5.10-SNAPSHOT'
+            compile 'org.spongepowered:mixin:0.5.11-SNAPSHOT'
         }
 
 #. Add a new Mixin configuration for your plugin, e.g. ``mixins.myplugin.json`` inside your resource folder:
@@ -87,7 +87,7 @@ You need to make some changes to your build script to be able to apply your Mixi
         }
 
 #. Add your Mixin configuration to your JAR manifest. The ``FMLCorePluginContainsFMLMod`` manifest entry is necessary if
-you want to load your Mixin on SpongeForge:
+   you want to load your Mixin on SpongeForge:
 
     .. code-block:: groovy
 
@@ -101,4 +101,4 @@ you want to load your Mixin on SpongeForge:
         }
 
 #. Make sure to re-build the plugin using the ``build`` Gradle task. Your Mixin should now be applied by SpongeVanilla
-and SpongeForge.
+   and SpongeForge.

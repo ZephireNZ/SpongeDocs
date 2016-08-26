@@ -31,23 +31,17 @@ Vanilla Workspace
                 name = 'forge'
                 url = 'http://files.minecraftforge.net/maven'
             }
-            maven {
-                name = 'minecrell'
-                url = 'http://repo.minecrell.net/releases'
-            }
         }
 
         dependencies {
             classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
-            classpath 'net.minecrell:VanillaGradle:2.0.3_1'
         }
     }
 
     plugins {
         id 'org.spongepowered.plugin' version '0.6'
+        id 'net.minecrell.vanillagradle.server' version '2.0.3_1'
     }
-
-    apply plugin: 'net.minecrell.minecraft.server.library'
 
     minecraft {
         version = '1.10.2'

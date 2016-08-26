@@ -26,7 +26,7 @@ between "Notch", "Searge" and "MCP" mappings can be seen in the example below:
 .. code-block:: java
 
     // Notch
-    void a(a snowman); // TODO: Using an unicode snowman breaks syntax highlighting
+    void a(a ☃);
 
     // Searge
     void func_4454848_a(Entity p_445848_1);
