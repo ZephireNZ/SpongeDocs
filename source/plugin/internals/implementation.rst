@@ -23,6 +23,7 @@ SpongeCommon
 
 Example Using Gradle
 ````````````````````
+
 .. code-block:: groovy
 
     dependencies {

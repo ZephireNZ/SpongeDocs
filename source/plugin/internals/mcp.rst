@@ -26,26 +26,63 @@ between "Notch", "Searge" and "MCP" mappings can be seen in the example below:
 .. code-block:: java
 
     // Notch
-    void a(a ☃);
+    boolean a(rw ☃);
 
     // Searge
-    void func_4454848_a(Entity p_445848_1);
+    boolean func_72838_d(Entity p_72838_1_);
 
     // MCP
-    void spawn(Entity entity);
+    boolean spawnEntityInWorld(Entity entityIn);
 
-- **Notch mappings** are the original names in the obfuscated Minecraft binary. They change regularily with Minecraft
-  mappings.
+- **Notch mappings** are the original names in the obfuscated Minecraft binary. They change regularily with new
+  Minecraft versions.
 - **Searge mappings** contain unique names for all obfuscated methods, fields and parameters, as well as human-readable
   names for the classes. Unlike Notch mappings they stay usually the same across Minecraft updates unless the method
   signatures change. For SpongeVanilla and SpongeForge, they are also used in production.
 - **MCP mappings** contain human-readable names largely contributed by the community. They are typically only used in
-  the development environment, and then reobfuscated to Searge or Notch mappings. If you encounter an unnamed method,
-  you can name it using the `MCP bot`_, which is available in the MCP and Sponge IRC channel. Name changes can be
-  requested on `GitHub <https://github.com/ModCoderPack/MCPBot-Issues/issues>`_.
+  the development environment, and then re-obfuscated to Searge or Notch mappings.
 
-When you create a plugin you work with *MCP mappings* in your development environment. To run the plugin in production
-(outside of your IDE) you need to reobfuscate it to *Searge mappings*.
+.. note::
+    When you create a plugin you work with *MCP mappings* in your development environment. To run the plugin in
+    production (outside of your IDE) you need to re-obfuscate it to *Searge mappings*.
+
+Using the MCPBot
+----------------
+The MCPBot_ is available in the Sponge and MCP IRC channels and allows you to lookup MCP mappings or contribute new
+names. You can send commands to the bot by sending messages in one of the supported channels:
+
+To lookup a mapping: ``<Command> <Notch, Searge or MCP name> [Optional Minecraft Version]``, where ``<Command>`` is
+one of the following:
+
+- ``!gf`` for **fields**
+- ``!gm`` for **methods**
+- ``!gp`` for **parameters**
+
+For example:
+
+::
+
+    !gf onlineMode
+    !gm spawnEntityInWorld
+    !gm func_72838_d
+    !gf ml.c 1.10.2
+
+Contributing new names
+``````````````````````
+You can also contribute names for class members which are still unnamed. Check out the
+`MCPBot help page`_ for more instructions.
+
+.. note::
+    You cannot change existing names. If you would like to suggest changing an existing mapping, create
+    a new issue on the `MCPBot issue tracker on GitHub <https://github.com/ModCoderPack/MCPBot-Issues/issues>`_.
+
+.. seealso::
+
+    `Mod Coder Pack`_
+        Official website of the Mod Coder Pack.
+    `MCPBot help page`_
+        More information about using the MCPBot_.
 
 .. _`Mod Coder Pack`: http://www.modcoderpack.com
-.. _`MCP bot`: http://mcpbot.bspk.rs/
+.. _MCPBot: http://mcpbot.bspk.rs/
+.. _`MCPBot help page`: http://mcpbot.bspk.rs/help

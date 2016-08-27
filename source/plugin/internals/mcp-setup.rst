@@ -11,12 +11,12 @@ the workspace, as well as the re-obfuscation of your plugin.
 
 Configuring ForgeGradle
 -----------------------
-You can choose between two different kinds of workspaces:
+You can choose between two different types of workspaces:
 
-- **Vanilla workspace:** You should use this if you want to support SpongeVanilla **and** SpongeForge.
-- **Forge workspace:** This workspace supports **only** SpongeForge (and **not** SpongeVanilla).
+- **Vanilla workspace:** Supports plugins for SpongeVanilla **and** SpongeForge.
+- **Forge workspace:** Supports **only** plugins for SpongeForge (and **not** SpongeVanilla).
 
-.. tip::
+.. note::
     In most cases, the Vanilla workspace can be used for SpongeVanilla and SpongeForge. In some cases, there may be
     problems on one of the platforms because of changes in the Minecraft code by Forge. Make sure to always test your
     plugin on both platforms when using MCP.
@@ -24,7 +24,6 @@ You can choose between two different kinds of workspaces:
 Vanilla Workspace
 `````````````````
 .. code-block:: groovy
-    :emphasize-lines: 1-12,16,19-22
 
     buildscript {
         repositories {
@@ -52,7 +51,6 @@ Vanilla Workspace
 Forge Workspace
 ```````````````
 .. code-block:: groovy
-    :emphasize-lines: 1-12,18-23
 
     buildscript {
         repositories {

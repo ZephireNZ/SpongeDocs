@@ -13,11 +13,11 @@ There are various reasons for bypassing SpongeAPI and accessing the internal Min
 .. warning::
     Depending on special implementation features will make your plugin only work on the implementation you build it
     against (and likely also only on a specific version). Unless you are certain that accessing the implementation is
-    necessary we recommend building plugins only against SpongeAPI.
+    necessary we highly recommend building plugins only against SpongeAPI.
 
 .. note::
-    The following articles assume you build your plugin for SpongeVanilla/SpongeForge. The plugin won't be usable on any
-    other implementation.
+    The following articles assume you build your plugin for SpongeVanilla/SpongeForge. The plugin will not be usable on
+    any other implementation.
 
 SpongeVanilla and SpongeForge use MCP as development environment for the internal Minecraft code. Continue at :doc:`mcp`
 for a short overview about MCP or continue directly with :doc:`mcp-setup` for an introduction about using MCP in

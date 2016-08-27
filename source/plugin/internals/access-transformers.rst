@@ -3,23 +3,23 @@ Access Transformers
 ===================
 
 Since some parts of the Minecraft code were not designed to be used from the outside, you may find yourself in a
-situation in which you need to access a field or method that is not public. While you could normally easily use
-reflection to access the field or method, MCP will make this more difficult since you have two different names - the MCP
-names in the development environment and the Searge names in production.
+situation in which you need to access a field or method that is not public. While you would normally use reflection to
+access the field or method, MCP will make this more difficult since you have two different names - the MCP names in the
+development environment and the Searge names in production.
 
-For example to access the method ``blah()`` using reflection you would need to use ``blah`` in the development
-environment, but ``func_84646546_a`` in production. The re-obfuscation step only handles direct references to methods
+For example to access the method ``tick()`` using reflection you would need to use ``tick`` in the development
+environment, but ``func_71217_p`` in production. The re-obfuscation step only handles direct references to methods
 and fields, not the string parameter passed to the reflection call.
 
-As a solution, ForgeGradle supports using access transformers (or AT) which automatically makes the specified
+As a solution, ForgeGradle supports using access transformers (or AT) that automatically make the specified
 methods/fields public so you can reference them directly (without reflection). If configured in the JAR manifest of the
 plugin, SpongeVanilla and Forge will also apply them in production.
 
 Setup
 -----
-ForgeGradle will automatically scan for access transformer files with the file name suffix ``-at.cfg`` in your resource
+ForgeGradle will automatically scan for access transformer files with the file name suffix ``_at.cfg`` in your resource
 folders. To be able to use the access transformer at runtime, you need to add them to a ``META-INF`` folder in your
-resource directory, for example ``META-INF/myplugin-at.cfg``.
+resource directory, for example ``META-INF/myplugin_at.cfg``.
 
 An access transformer line is defined by 3 parts, each separated by a space:
 
@@ -32,15 +32,19 @@ An access transformer line is defined by 3 parts, each separated by a space:
     You can add comments by prefixing them with ``#``. A good convention is to add the MCP name after each access
     transformer line so you know which field/method the line is referring to.
 
-To apply the access transformers to your development environment, run the Gradle ``setupDecompWorkspace`` task again and
-refresh your Gradle project.
-
 Here are two examples for an access transformer line:
 
 ::
 
     public-f net.minecraft.server.MinecraftServer field_71308_o # anvilFile
     public net.minecraft.server.MinecraftServer func_71260_j()V # stopServer
+
+To apply the access transformers to your development environment, run the Gradle ``setupDecompWorkspace`` task again and
+refresh your Gradle project:
+
+.. code-block:: bash
+
+    gradle setupDecompWorkspace
 
 .. tip::
     You can use the `MCP bot <http://mcpbot.bspk.rs/help>`_ which is present in the MCP and Sponge IRC channels to
