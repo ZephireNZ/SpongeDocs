@@ -49,23 +49,10 @@ between "Notch", "Searge" and "MCP" mappings can be seen in the example below:
 Using the MCPBot
 ----------------
 The MCPBot_ is available in the Sponge and MCP IRC channels and allows you to lookup MCP mappings or contribute new
-names. You can send commands to the bot by sending messages in one of the supported channels:
+names. You can send commands to the bot by sending messages in one of the supported channels.
 
-To lookup a mapping: ``<Command> <Notch, Searge or MCP name> [Optional Minecraft Version]``, where ``<Command>`` is
-one of the following:
-
-- ``!gf`` for **fields**
-- ``!gm`` for **methods**
-- ``!gp`` for **parameters**
-
-For example:
-
-::
-
-    !gf onlineMode
-    !gm spawnEntityInWorld
-    !gm func_72838_d
-    !gf ml.c 1.10.2
+.. tip::
+    Check out the `MCPBot help page`_ for a list of all available commands.
 
 Contributing new names
 ``````````````````````
