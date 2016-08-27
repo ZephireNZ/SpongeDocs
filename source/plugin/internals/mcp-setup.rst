@@ -96,4 +96,8 @@ Building Your Plugin
 ForgeGradle automatically configures your plugin to re-obfuscate to Searge mappings when building it so you can run it
 in production. Make sure to use Gradle's ``build`` task, and not ``jar`` directly.
 
+.. code-block:: bash
+
+    gradle clean build
+
 .. _ForgeGradle: https://github.com/MinecraftForge/ForgeGradle
